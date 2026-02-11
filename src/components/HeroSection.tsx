@@ -3,7 +3,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import { MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
-  const whatsappLink = "https://wa.me/5500000000000?text=Olá! Gostaria de solicitar um orçamento.";
+  const whatsappLink = "https://wa.me/5521981760720?text=Olá! Gostaria de solicitar um orçamento.";
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
