@@ -30,17 +30,17 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Contato</h4>
             <div className="space-y-3">
-              <a href="tel:+5500000000000" className="flex items-center gap-3 text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors">
+              <a href="tel:+5521981760720" className="flex items-center gap-3 text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors">
                 <Phone className="w-4 h-4 text-deep-blue-light" />
-                (00) 00000-0000
+                (21) 98176-0720
               </a>
-              <a href="mailto:contato@mpfgomes.com.br" className="flex items-center gap-3 text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors">
+              <a href="mailto:pfgomes.servicos@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors">
                 <Mail className="w-4 h-4 text-deep-blue-light" />
                 contato@mpfgomes.com.br
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground font-body">
                 <MapPin className="w-4 h-4 text-deep-blue-light flex-shrink-0" />
-                Sua Cidade - Estado
+                Rio de Janeiro - Brasil
               </div>
             </div>
           </div>
