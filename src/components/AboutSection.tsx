@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, Users, Clock, Wrench } from "lucide-react";
+import { ANIMATION } from "@/lib/constants";
 
 const stats = [
   { icon: Clock, label: "Anos de Experiência", value: "15+" },
@@ -46,8 +47,8 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.1 * index }}
-                className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-blue-glow transition-all duration-300"
+                transition={{ duration: 0.4, delay: ANIMATION.staggerDelay * index }}
+                className="glass-effect bg-card/40 border border-border/50 rounded-xl p-6 text-center hover:shadow-blue-glow hover:border-deep-blue-light/50 hover:bg-card/60 transition-all duration-300 backdrop-blur-md"
               >
                 <stat.icon className="w-8 h-8 text-deep-blue-light mx-auto mb-3" />
                 <div className="text-2xl sm:text-3xl font-heading font-bold text-gradient-metallic mb-1">{stat.value}</div>

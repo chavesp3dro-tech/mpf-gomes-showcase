@@ -4,6 +4,7 @@ import serviceVidracaria from "@/assets/service-vidracaria.jpg";
 import serviceIndustrial from "@/assets/service-industrial.jpg";
 import serviceVidracariaInd from "@/assets/service-vidracaria-ind.jpg";
 import { useState } from "react";
+import { ANIMATION } from "@/lib/constants";
 
 const categories = ["Todos", "Serralheria", "Vidraçaria", "Industrial"];
 
@@ -49,7 +50,7 @@ const PortfolioSection = () => {
               className={`px-5 py-2 rounded-full text-sm font-heading font-medium transition-all ${
                 activeCategory === cat
                   ? "bg-steel-gradient text-primary-foreground shadow-blue-glow"
-                  : "bg-card border border-border text-muted-foreground hover:text-foreground"
+                  : "glass-effect bg-card/40 border border-border/50 text-muted-foreground hover:text-foreground hover:bg-card/60 backdrop-blur-sm"
               }`}
             >
               {cat}
@@ -64,9 +65,9 @@ const PortfolioSection = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
+              transition={{ duration: 0.4, delay: index * ANIMATION.staggerDelay }}
               layout
-              className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-blue-glow transition-all duration-300"
+              className="group glass-effect bg-card/40 border border-border/50 rounded-xl overflow-hidden hover:shadow-blue-glow hover:border-deep-blue-light/50 hover:bg-card/60 transition-all duration-300 backdrop-blur-md"
             >
               <div className="relative h-48 overflow-hidden">
                 <img

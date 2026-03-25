@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import { MessageCircle } from "lucide-react";
+import { WHATSAPP_LINKS, ANIMATION } from "@/lib/constants";
 
 const HeroSection = () => {
-  const whatsappLink = "https://wa.me/5521981760720?text=Olá! Gostaria de solicitar um orçamento.";
-
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       <div className="absolute inset-0">
         <img src={heroBg} alt="Estruturas metálicas e vidraçaria" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
@@ -17,10 +16,10 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: ANIMATION.duration, ease: ANIMATION.easeOut }}
           className="max-w-3xl"
         >
-          <div className="inline-block mb-6 px-4 py-1.5 border border-metallic/30 rounded-full">
+          <div className="inline-block mb-6 px-4 py-1.5 border border-metallic/30 rounded-full backdrop-blur-sm">
             <span className="text-sm font-body text-metallic tracking-widest uppercase">Serralheria & Vidraçaria</span>
           </div>
 
@@ -35,12 +34,12 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.a
-              href={whatsappLink}
+              href={WHATSAPP_LINKS.general}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-center gap-3 bg-steel-gradient px-8 py-4 rounded-lg font-heading font-semibold text-primary-foreground shadow-blue-glow transition-all"
+              className="inline-flex items-center justify-center gap-3 bg-steel-gradient px-8 py-4 rounded-lg font-heading font-semibold text-primary-foreground shadow-blue-glow hover:opacity-90 transition-all"
             >
               <MessageCircle className="w-5 h-5" />
               Solicite um Orçamento

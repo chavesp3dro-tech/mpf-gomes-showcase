@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { ANIMATION } from "@/lib/constants";
 
 const testimonials = [
   {
@@ -45,8 +46,8 @@ const TestimonialsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-card border border-border rounded-xl p-8 relative"
+              transition={{ duration: 0.5, delay: index * ANIMATION.staggerDelay }}
+              className="glass-effect bg-card/40 border border-border/50 rounded-xl p-8 relative hover:shadow-blue-glow hover:border-deep-blue-light/50 hover:bg-card/60 transition-all duration-300 backdrop-blur-md"
             >
               <Quote className="w-8 h-8 text-deep-blue-light/20 absolute top-6 right-6" />
               <div className="flex gap-1 mb-4">

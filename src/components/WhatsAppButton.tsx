@@ -1,12 +1,11 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { WHATSAPP_LINKS } from "@/lib/constants";
 
 const WhatsAppButton = () => {
-  const whatsappLink = "https://wa.me/5521981760720?text=Olá! Gostaria de solicitar um orçamento.";
-
   return (
     <motion.a
-      href={whatsappLink}
+      href={WHATSAPP_LINKS.general}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}

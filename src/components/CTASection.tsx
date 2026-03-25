@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { WHATSAPP_LINKS } from "@/lib/constants";
 
 const CTASection = () => {
-  const whatsappLink = "https://wa.me/5500000000000?text=Olá! Gostaria de solicitar um orçamento com a MPF Gomes.";
-
   return (
     <section className="py-24 bg-metallic-gradient relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-metallic/20 to-transparent" />
@@ -29,12 +28,12 @@ const CTASection = () => {
           </p>
 
           <motion.a
-            href={whatsappLink}
+            href={WHATSAPP_LINKS.general}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-3 bg-steel-gradient px-12 py-5 rounded-lg font-heading font-bold text-lg text-primary-foreground shadow-blue-glow transition-all"
+            className="inline-flex items-center gap-3 bg-steel-gradient px-12 py-5 rounded-lg font-heading font-bold text-lg text-primary-foreground shadow-blue-glow hover:opacity-90 transition-all"
           >
             <MessageCircle className="w-6 h-6" />
             Orçamento Rápido via WhatsApp

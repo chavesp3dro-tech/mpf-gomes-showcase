@@ -1,4 +1,5 @@
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { NAV_ITEMS, CONTACT } from "@/lib/constants";
 
 const Footer = () => {
   return (
@@ -15,13 +16,13 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Links Rápidos</h4>
             <nav className="space-y-2">
-              {["Início", "Sobre", "Serviços", "Diferenciais", "Depoimentos"].map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`}
+                  key={item.label}
+                  href={item.href}
                   className="block text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors"
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
             </nav>
@@ -30,17 +31,23 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Contato</h4>
             <div className="space-y-3">
-              <a href="tel:+5521981760720" className="flex items-center gap-3 text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors">
+              <a
+                href={`tel:${CONTACT.phone}`}
+                className="flex items-center gap-3 text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors"
+              >
                 <Phone className="w-4 h-4 text-deep-blue-light" />
-                (21) 98176-0720
+                {CONTACT.phone.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3")}
               </a>
-              <a href="mailto:pfgomes.servicos@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors">
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="flex items-center gap-3 text-sm text-muted-foreground font-body hover:text-deep-blue-light transition-colors"
+              >
                 <Mail className="w-4 h-4 text-deep-blue-light" />
-                contato@mpfgomes.com.br
+                {CONTACT.email}
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground font-body">
                 <MapPin className="w-4 h-4 text-deep-blue-light flex-shrink-0" />
-                Rio de Janeiro - Brasil
+                {CONTACT.location}
               </div>
             </div>
           </div>

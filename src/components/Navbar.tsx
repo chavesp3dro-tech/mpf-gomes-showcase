@@ -1,14 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navItems = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Depoimentos", href: "#depoimentos" },
-];
+import { NAV_ITEMS, WHATSAPP_LINKS } from "@/lib/constants";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +16,7 @@ const Navbar = () => {
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
@@ -33,10 +26,10 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/5500000000000?text=Olá! Gostaria de solicitar um orçamento."
+              href={WHATSAPP_LINKS.general}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-steel-gradient px-5 py-2 rounded-lg text-sm font-heading font-semibold text-primary-foreground"
+              className="bg-steel-gradient px-5 py-2 rounded-lg text-sm font-heading font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
             >
               Orçamento
             </a>
@@ -63,7 +56,7 @@ const Navbar = () => {
             className="md:hidden glass-effect border-t border-border overflow-hidden"
           >
             <div className="px-4 py-4 space-y-3">
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
@@ -74,10 +67,10 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="https://wa.me/5500000000000?text=Olá! Gostaria de solicitar um orçamento."
+                href={WHATSAPP_LINKS.general}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-steel-gradient px-5 py-3 rounded-lg text-sm font-heading font-semibold text-primary-foreground text-center"
+                className="block bg-steel-gradient px-5 py-3 rounded-lg text-sm font-heading font-semibold text-primary-foreground text-center hover:opacity-90 transition-opacity"
               >
                 Orçamento
               </a>
