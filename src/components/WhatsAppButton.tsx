@@ -7,7 +7,7 @@ const WhatsAppButton = () => {
 
   return (
     <motion.a
-      href={whatsappUrl}
+      href={https://wa.me/5521981760720?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20fazer%20um%20or%C3%A7amento}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}
