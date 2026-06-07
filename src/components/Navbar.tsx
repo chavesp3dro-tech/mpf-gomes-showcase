@@ -26,7 +26,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href={WHATSAPP_LINKS.general}
+              href={https://wa.me/5521981760720?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20fazer%20um%20or%C3%A7amento}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-steel-gradient px-5 py-2 rounded-lg text-sm font-heading font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
@@ -67,7 +67,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href={WHATSAPP_LINKS.general}
+                href={https://wa.me/5521981760720?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20fazer%20um%20or%C3%A7amento}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-steel-gradient px-5 py-3 rounded-lg text-sm font-heading font-semibold text-primary-foreground text-center hover:opacity-90 transition-opacity"
