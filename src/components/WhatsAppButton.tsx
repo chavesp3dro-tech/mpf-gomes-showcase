@@ -3,11 +3,17 @@ import { motion } from "framer-motion";
 import { WHATSAPP_LINKS } from "@/lib/constants";
 
 const WhatsAppButton = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open(WHATSAPP_LINKS.general, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <motion.a
       href={WHATSAPP_LINKS.general}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, type: "spring" }}
